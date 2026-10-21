@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-
 public abstract class Room {
     @Id
     private String roomId;
@@ -18,6 +17,7 @@ public abstract class Room {
         this.capacity = 0;
         this.status = "Null";
     }
+
     public Room(String roomId, double pricePerNight, int capacity, String status) {
         this.roomId = roomId;
         this.pricePerNight = pricePerNight;
@@ -58,6 +58,7 @@ public abstract class Room {
     }
 
     public abstract double calculatePrice(int nights);
+
     public abstract String getType();
 
     public String displayRoomDetails() {

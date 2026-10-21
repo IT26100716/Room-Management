@@ -1,5 +1,9 @@
 package com.hotel.roommanagementH2.entity;
 
+import jakarta.persistence.Entity;
+
+@Entity
+
 public class SuiteRoom extends Room{
 
     private double serviceCharge = 1.2;
@@ -7,6 +11,7 @@ public class SuiteRoom extends Room{
     public SuiteRoom(String id, double price, int capacity, String status) {
         super(id, price, capacity, status);
     }
+    public SuiteRoom(){}
 
     public double calculatePrice(int nights) {
         return getPricePerNight() * nights * serviceCharge ;
